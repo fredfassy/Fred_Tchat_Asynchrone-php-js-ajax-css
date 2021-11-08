@@ -1,0 +1,302 @@
+/*====== Google Fonts  ======*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+/*====== Couleurs ======*/
+
+
+--text-color: #fff;
+--text-color-2: #af00af;
+--text-color-3: #580758;
+
+/*====== Font size ======*/
+--h1-font-size: 2.5rem;
+--h2-font-size: 1.5rem;
+--h3-font-size: 1.25rem;
+--normal-font-size: 1rem;
+--small-font-size: 0.812rem;
+--smaller-font-size: 0.75rem;
+
+/*====== Font Weight ======*/
+--font-regular: 400;
+--font-semi-bold: 600;
+--font-bold: 700;
+
+/*====== Margins ======*/
+--mar-1: 6rem;
+--mar-2: 3rem;
+--mar-3: 1.5rem;
+--mar-4: 1rem;
+--mar-5: 0.5rem;
+
+/*====== Paddings ======*/
+--pad-1: 6rem;
+--pad-2: 3rem;
+--pad-3: 1.5rem;
+--pad-4: 1rem;
+--pad-5: 0.5rem;
+
+/*====== z-index ======*/
+--z-fixed: 100;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  All  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../../common/media/sources/bg01.png");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+body.active{
+    background:url("../../common/media/sources/bg02.png");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    
+   
+}
+
+.bluebg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.2) );
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+.bluebg .box{
+    position: relative;
+    width:50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.bluebg .box h2{
+    color: #af00af;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.bluebg .box button{
+     cursor: pointer;
+     padding: 10px 20px;
+     background: #fff;
+     color: #333;
+     font-size: 16px;
+     font-weight: 500;
+     border: none;
+}
+
+.formBx{
+    position: absolute;
+    background:linear-gradient(rgba(255,255,255,0.3),rgba(250,250,250,0.4),rgba(240,240,240,1),rgba(240,240,240,1),rgba(250,250,250,0.4), rgba(255,255,255,0.3) );
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius:10px;
+}
+
+.formBx.active{
+    left:50%;
+}
+
+.formBx .form{
+    position: absolute;
+    left: 0;
+    padding: 25px;
+    transition: 0.5s;
+}
+
+.formBx .signinForm{
+    transition-delay: 0.25s;
+    width:80%;
+}
+
+.formBx.active .signinForm{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formBx .signupForm{
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.formBx.active .signupForm{
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.formBx .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx .form form h3{
+    font-size: 1.5em;
+    color: var(--text-color-3);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.formBx .form form input{
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+
+.formBx .form form input[type="submit"]{
+    background: var(--text-color-2);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.formBx.active .signupForm input[type="submit"]{
+    background: var(--text-color-2);
+} 
+
+
+.formBx .form form .forgot{
+    color:var(--text-color-3);
+}
+
+
+.information{
+    color:#193250;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+
+/*==========  Alert boxes  ==========*/
+
+.alertphp{
+    position: fixed;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    justify-content: center;
+    text-align: center;
+    top:50px;
+    color:orangered;
+    font-size: 1.4rem;
+}
+
+.successphp{
+    position: fixed;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    justify-content: center;
+    text-align: center;
+    top:50px;
+    color:#27c200;
+    font-size: 1.4rem;
+}
+
+.redalert{
+    color:red;
+    font-size: 0.8rem;
+    margin-top: -1rem;
+}
+
+/*==========  Media Queries  ==========*/
+
+@media (max-width: 991px){
+
+    .container{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .bluebg{
+        top: 0;
+        height:100%;
+    }
+
+    .formBx{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+    .bluebg .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+
+    .box.signin{
+        top: 0;
+    }
+
+    .formBx.active{
+        left:0;
+        top: 150px;
+    }
+
+    .alertphp{
+        height:4rem;
+        justify-content: center;
+        text-align: center;
+        top:50px;
+        color:orangered;
+        font-size: 1rem;
+        z-index: 9999999;
+    }
+    
+    .successphp{
+        height:4rem;
+        justify-content: center;
+        text-align: center;
+        top:50px;
+        color:#27c200;
+        font-size: 1rem;
+        z-index: 9999999;
+    }
+}
